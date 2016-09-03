@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmski List</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Filmski List</h1>
+    
+    <h2>Vnesi podatke o filmu</h2>
+
+    <form action="/vnos" method="post">
+        <p>Naslov:</p><input name="name" required>
+        <br>
+        <p>Leto:</p><input name="year" type="number" min="1826" required>
+        <br>
+        <p>Zvrst:</p><input name="genre">
+        <br>
+        <p>URL slike:</p><input name="image">
+        <br>
+        <p>Ocena:</p><input name="rating" type="number" min="1" max="5" required>
+        <br>
+        <button type="submit">OK</button>
+    </form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Filmski List</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Filmski List</h1>
+    
+    <div class="gumb">
+    <a href="/vnos">Vnesi nov film</a>
+    </div>
+    <br><br>
+
+    <div class="list">
+    {% for film in seznam %}
+        <div class="movie">
+            <div class="slika">
+                <img src='{{ film.image }}'>
+            </div>
+
+            <div class="top">
+                {{ film.name }}
+                <span>
+                    {{ film.year }}
+                </span>
+            </div>
+            <div class="ocena">
+                {{ film.rating }}
+            </div>
+            <br><br>
+            <div class="bottom">
+                {{ film.genre }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+</body>
+</html>
